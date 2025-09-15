@@ -71,7 +71,7 @@ echo "Entering chroot environment..."
 arch-chroot /mnt /bin/bash <<EOF
 # --- CHROOT SCRIPT ---
 # Timezone setup
-ln -sf /usr/share/zoneinfo/Asia/Riyadh /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Baghdad /etc/localtime
 hwclock --systohc
 
 # Localization
