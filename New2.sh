@@ -33,11 +33,12 @@ echo "--- Mounting Filesystems ---"
 #swapon /dev/vg0/swap
 
 echo "--- Installing Base, XFCE, Pipewire & Fonts ---"
-#pacstrap -K /mnt base base-devel linux linux-headers linux-firmware lvm2 vim intel-ucode networkmanager network-manager-applet dialog ntfs-3g wireless_tools wpa_supplicant mtools dosfstools git bluez bluez-utils cups alsa-utils xdg-utils openssh xf86-video-intel xorg pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xfce4 xfce4-goodies gvfs dbus blueman firefox xarchiver xz unrar unzip p7zip ttf-dejavu ttf-liberation noto-fonts ttf-roboto
+#pacstrap -K /mnt base base-devel linux linux-headers linux-firmware lvm2 vim nano intel-ucode
+
+#pacstrap -K /mnt networkmanager network-manager-applet dialog ntfs-3g wireless_tools wpa_supplicant mtools dosfstools git bluez bluez-utils cups alsa-utils xdg-utils openssh xf86-video-intel xorg pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xfce4 xfce4-goodies gvfs dbus blueman firefox xarchiver xz unrar unzip p7zip ttf-dejavu ttf-liberation noto-fonts ttf-roboto
 
 echo "--- Generating fstab ---"
 #genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "--- Configuring System (Chroot) ---"
-
-echo "Installation Complete! Reboot and enjoy your encrypted XFCE system."
+#arch-chroot /mnt
